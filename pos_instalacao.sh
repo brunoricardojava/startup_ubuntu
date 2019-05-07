@@ -44,9 +44,11 @@ else
 				;;
 
         3)
+        echo -e "\033[1;33m Instalando Zsh \033[0m"
         apt install zsh -y
         sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
         apt-get install fonts-powerline -y
+        # chsh -s /bin/zsh
         ;;
 
         4)
@@ -67,7 +69,7 @@ else
         6)
         echo -e "\033[1;33m Terminator \033[0m"
 				apt update
-				apt install terminator
+				apt install terminator -y
         ;;
 
         7)
