@@ -12,19 +12,19 @@ else
 
 	sudo apt-get install dialog
 	cmd=(dialog --separate-output --checklist "Please Select Software you want to install:" 22 76 16)
-	options=(1 "Git" off    # any option can be set to default to "on"
-	         2 "Vim" off
-           3 "Oh My Zsh"
-	         4 "Atom" off
-           5 "Google Chrome" off
-           6 "Terminator" off
-           7 "Android Studio" off
-           8 "Wine" off
-           9 "Nvidia Drivers" off
+	options=(1 "Git"                 off    # any option can be set to default to "on"
+	         2 "Vim"                 off
+           3 "Oh My Zsh"           off
+	         4 "Atom"                off
+           5 "Google Chrome"       off
+           6 "Terminator"          off
+           7 "Android Studio"      off
+           8 "Wine"                off
+           9 "Nvidia Drivers"      off
            10 "Vulkan para Nvidia" off
-           11 "Lutris" off
-           12 "Steam" off
-           13 "Deluge" off
+           11 "Lutris"             off
+           12 "Steam"              off
+           13 "Deluge"             off
 	         )
 		choices=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
 		clear
@@ -121,7 +121,7 @@ else
         echo -e "\033[1;33m Instalando Deluge \033[0m"
         add-apt-repository ppa:deluge-team/ppa -y
         apt update
-        apt install deluge
+        apt install deluge -y
         ;;
 
 	    esac
