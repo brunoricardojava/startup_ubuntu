@@ -32,7 +32,7 @@ else
 		do
 		    case $choice in
 	      1)
-				    echo -e "\033[1;33m Instalando Git \033[0m"
+				echo -e "\033[1;33m Instalando Git \033[0m"
 				apt update
 				apt install git -y
 				;;
