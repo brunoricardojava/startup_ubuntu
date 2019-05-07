@@ -24,6 +24,7 @@ else
            10 "Vulkan para Nvidia" off
            11 "Lutris" off
            12 "Steam" off
+           13 "Deluge" off
 	         )
 		choices=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
 		clear
@@ -31,7 +32,7 @@ else
 		do
 		    case $choice in
 	      1)
-				echo -e "\033[1;33m Instalando Git \033[0m"
+				    echo -e "\033[1;33m Instalando Git \033[0m"
 				apt update
 				apt install git -y
 				;;
@@ -114,6 +115,13 @@ else
         https://steamcdn-a.akamaihd.net/client/installer/steam.deb
         dpkg -i steam_latest.deb
         rm steam_latest.deb
+        ;;
+
+        13)
+        echo -e "\033[1;33m Instalando Deluge \033[0m"
+        add-apt-repository ppa:deluge-team/ppa -y
+        apt update
+        apt install deluge
         ;;
 
 	    esac
