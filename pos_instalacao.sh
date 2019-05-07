@@ -81,8 +81,8 @@ else
         8)
         echo -e "\033[1;33m Instalando Wine \033[0m"
         dpkg --add-architecture i386
-        wget -nc https://dl.winehq.org/wine-builds/winehq.key
-        apt-key add winehq.key
+        wget -nc https://dl.winehq.org/wine-builds/winehq.key -P ~/
+        apt-key add ~/winehq.key
         apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ disco main' -y
         apt update
         apt install --install-recommends winehq-staging -y
